@@ -2,6 +2,8 @@
 
 **Please Don't Break Anything**
 
+[Play the game](https://moonbase-intern.vercel.app/) · [Source repository](https://github.com/tropicalbee/Moonbase-Intern)
+
 Moonbase Intern is a desktop first-person browser game about keeping a lunar research habitat operational during a seven-minute shift. The player is the station's newest intern: repair five systems, choose priorities when faults overlap, and hand over with every system stable.
 
 ## The experience

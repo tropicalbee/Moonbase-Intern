@@ -2,6 +2,8 @@
 
 Moonbase Intern is a static browser game. It requires desktop keyboard/mouse input, WebGL and pointer capture. Audio starts after a user gesture. No backend, login or external AI service is required.
 
+[Play the game](https://moonbase-intern.vercel.app/) · [Source repository](https://github.com/tropicalbee/Moonbase-Intern)
+
 ## Install and develop
 
 Use Node.js `^20.19.0 || >=22.12.0`, matching `package.json`. From the repository root:
@@ -42,7 +44,7 @@ Upload the **contents of the release directory identified by `dist/latest-releas
 
 Serve JavaScript/CSS with appropriate MIME types and GLBs as binary model data. HTTPS supports normal clipboard access; manual copying remains available. Hashed files under `static/` can use long-lived caching; revalidate HTML and the release manifest on updates.
 
-The repository includes a Vercel configuration. Its build command runs the verified build and copies the pointed-to release into `vercel-dist/`, which is the configured output directory. `scripts/prepare-vercel.mjs` is an alternative helper that copies to `dist/site`; it is not the command currently configured in `vercel.json`. Configuration alone does not establish that a live deployment exists.
+The game is hosted at [moonbase-intern.vercel.app](https://moonbase-intern.vercel.app/). The repository's Vercel build command runs the verified build and copies the pointed-to release into `vercel-dist/`, the configured output directory.
 
 Review [third-party notices](../THIRD_PARTY_NOTICES.md) for asset attribution and permission gaps before redistributing the package.
 

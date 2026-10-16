@@ -6,6 +6,8 @@ Normal shifts use **plan version 8**. A seed and plan version determine the plan
 
 Use a URL such as `/?seed=LUNA-1234ABCD&plan=8`. Seeds must be `LUNA-` followed by exactly eight hexadecimal digits; input is trimmed and normalized to uppercase. Invalid seeds fall back to a newly generated seed.
 
+[Play this seed on the hosted game](https://moonbase-intern.vercel.app/?seed=LUNA-1234ABCD&plan=8).
+
 The report displays the seed and plan version. Replay Seed retains both. Retry Shift and R generate a fresh seed with the same plan version, without repeating arrival. Return to Title also prepares a fresh seed through the player-reset callback, then keeps that new plan idle for Start Shift. Leaving training preserves its prepared real-run plan instead. A page reload runs arrival again.
 
 Reproducibility applies to the plan in a given build and version. Player actions, travel, ambient animation and cosmetic presentation are not a recorded replay.

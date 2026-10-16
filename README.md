@@ -15,10 +15,10 @@
 </p>
 
 <p align="center">
-  <a href="https://moonbase-intern-sketch.vercel.app/"><strong>Play in your browser</strong></a> &middot;
+  <a href="https://moonbase-intern.vercel.app/"><strong>Play in your browser</strong></a> &middot;
   <a href="#6-run-locally">Run locally</a> &middot;
   <a href="#5-architecture">Architecture</a> &middot;
-  <a href="https://github.com/tropicalbee/moonbase_intern_sketch/issues">Report a bug</a> &middot;
+  <a href="https://github.com/tropicalbee/Moonbase-Intern/issues">Report a bug</a> &middot;
   <a href="./CONTRIBUTING.md">Contribute</a>
 </p>
 <p align="center">Created by <a href="https://github.com/tropicalbee"><strong>@tropicalbee</strong></a></p>
@@ -135,8 +135,8 @@ Use Git, **Node.js 20.19+ on the 20.x line or 22.12+**, matching [package.json](
 ### Bash (Linux, macOS, or Git Bash)
 
 ```bash
-git clone https://github.com/tropicalbee/moonbase_intern_sketch.git
-cd moonbase_intern_sketch
+git clone https://github.com/tropicalbee/Moonbase-Intern.git
+cd Moonbase-Intern
 npm ci
 npm run dev
 ```
@@ -144,8 +144,8 @@ npm run dev
 ### Windows PowerShell
 
 ```powershell
-git clone https://github.com/tropicalbee/moonbase_intern_sketch.git
-Set-Location moonbase_intern_sketch
+git clone https://github.com/tropicalbee/Moonbase-Intern.git
+Set-Location Moonbase-Intern
 npm.cmd ci
 npm.cmd run dev
 ```
@@ -183,9 +183,7 @@ Open [http://127.0.0.1:4173](http://127.0.0.1:4173) to preview the release. Thes
 | `npm run test:release` | Serves that release on localhost, fetches every packaged file, checks hashes and MIME types, then stops. |
 | `npm run preview` | Serves the latest verified release on port 4173. |
 
-`dist/latest-release.txt` identifies the current release. For a static host, upload the **contents of that release folder**, rather than the entire repository. The included Vercel configuration prepares `dist/site` through its configured build command. See [Public build](./docs/PUBLIC_BUILD.md).
-
-The `npm test` script expects `tests/unit/`, which is not included in this clean copy. The release checks above are available here; they do not replace browser playtesting.
+`dist/latest-release.txt` identifies the current release. For a static host, upload the **contents of that release folder**, rather than the entire repository. The included Vercel configuration copies the verified release into `vercel-dist/`. See [Public build](./docs/PUBLIC_BUILD.md).
 
 ## 8. Project status
 
@@ -195,7 +193,7 @@ Built by [@tropicalbee](https://github.com/tropicalbee) as a fun side project wh
 
 ## 9. Open source and contributing
 
-Found a bug? [Open an issue](https://github.com/tropicalbee/moonbase_intern_sketch/issues) with the seed, affected equipment, browser, operating system, and reproduction steps. A screenshot or short recording helps, especially for interaction and rendering problems.
+Found a bug? [Open an issue](https://github.com/tropicalbee/Moonbase-Intern/issues) with the seed, affected equipment, browser, operating system, and reproduction steps. A screenshot or short recording helps, especially for interaction and rendering problems.
 
 Want to help? Performance work, accessibility, clearer repair feedback, testing on different hardware, and recovering asset attribution are all useful contributions.
 
@@ -204,7 +202,7 @@ Want to help? Performance work, accessibility, clearer repair feedback, testing 
 - [Third-Party Notices](./THIRD_PARTY_NOTICES.md): asset credits, library notices, and attribution gaps.
 - [Apache 2.0 license](./LICENSE): terms for the original project code.
 
-If the project is useful or you enjoyed your shift, **[star the repository](https://github.com/tropicalbee/moonbase_intern_sketch)** to support it. **[Fork it](https://github.com/tropicalbee/moonbase_intern_sketch/fork)** to experiment or contribute your own improvements.
+If the project is useful or you enjoyed your shift, **[star the repository](https://github.com/tropicalbee/Moonbase-Intern)** to support it. **[Fork it](https://github.com/tropicalbee/Moonbase-Intern/fork)** to experiment or contribute your own improvements.
 
 ## 10. Credits and license
 
