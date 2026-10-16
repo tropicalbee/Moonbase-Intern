@@ -31,7 +31,23 @@ playwright-report/
 coverage/
 *.tsbuildinfo
 
+# Local test suite (not published for now)
+/tests/
+
 # agent folder and files
 
 .agents
 AGENTS.md
+
+
+# Internal documentation and agent working notes
+docs/*.md
+!docs/DIFFICULTY.md
+!docs/PUBLIC_BUILD.md
+!docs/SCORING.md
+!docs/SEEDED_EVENTS.md
+
+docs/game-plan/*.md
+!docs/game-plan/ARCHITECTURE.md
+!docs/game-plan/GAMEPLAY_SYSTEMS.md
+!docs/game-plan/GAME_CONCEPT.md
