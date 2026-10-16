@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#071622" />
+  <meta name="description" content="Survive a seven-minute lunar shift: repair five station systems, uncover secrets and share your score." />
+  <title>Moonbase Intern | Please Don't Break Anything</title>
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="scene" class="scene" aria-hidden="true"></div>
+    <div class="scene-shade" aria-hidden="true"></div>
+    <section id="arrival" class="arrival" hidden aria-label="Station arrival">
+      <div id="arrival-fade" class="arrival-fade" aria-hidden="true"></div>
+      <div class="arrival-manifest"><span>LUNAR SURFACE / RESEARCH HABITAT</span><h2>LUNAR STATION 07</h2><p>Incoming personnel: <b>Intern</b><span class="arrival-shift">Assigned shift / 07:00</span></p></div>
+      <div id="arrival-phase" class="arrival-phase">01 / INCOMING TRANSMISSION</div>
+      <div class="arrival-radio"><span>RADIO CHANNEL / STATION APPROACH</span><p id="arrival-caption" role="status"></p><small id="arrival-controls"></small></div>
+      <div class="arrival-actions"><button id="arrival-mute" type="button" aria-pressed="false">[M] MUTE AUDIO</button><button id="arrival-skip" type="button" disabled>SKIP IN 4s</button></div>
+    </section>
+
+    <div id="game-hud" class="game-hud" hidden>
+      <span class="hud-title">MOONBASE INTERN <span>LUNAR SURFACE / HABITAT 07</span></span>
+      <span class="hud-location">RESEARCH BIOSPHERE <span>SEALED HABITAT</span></span>
+      <span class="hud-controls">WASD MOVE &nbsp;·&nbsp; MOUSE LOOK &nbsp;·&nbsp; SHIFT SPRINT &nbsp;·&nbsp; R RESET &nbsp;·&nbsp; P PHOTO PAUSE &nbsp;·&nbsp; ESC PAUSE</span>
+    </div>
+    <div id="reticle" class="reticle" aria-hidden="true" hidden></div>
+    <main id="start-screen" class="start-screen" hidden>
+      <div class="start-card">
+        <h1 class="menu-wordmark"><span class="menu-title-prefix">MOONBASE</span> <span class="menu-title-main">INTERN</span></h1>
+        <p class="menu-tagline">Please Don&rsquo;t Break Anything</p>
+        <div class="menu-actions"><button id="start-button" class="menu-primary" type="button">START SHIFT</button>
+        <nav class="menu-secondary" aria-label="Menu options">
+          <button type="button" data-menu-dialog="how-to-play" aria-haspopup="dialog">HOW TO PLAY</button>
+          <button type="button" data-menu-dialog="settings" aria-haspopup="dialog">SETTINGS</button>
+        </nav>
+        <button id="reset-button" class="reset-button" type="button" hidden>RETURN TO HABITAT</button>
+        </div><p class="touch-note">Desktop keyboard and mouse required. Use a browser with WebGL and mouse capture enabled.</p>
+      </div>
+      <dialog id="how-to-play" class="menu-dialog" aria-labelledby="how-to-play-title"></dialog>
+      <dialog id="settings" class="menu-dialog" aria-labelledby="settings-title">
+        <header class="menu-dialog-header">
+          <div><h2 id="settings-title">Settings</h2></div>
+          <form method="dialog"><button class="menu-close" aria-label="Close Settings">&times;</button></form>
+        </header>
+        <div class="comfort-controls">
+          <label for="look-speed">Mouse sensitivity <output id="look-speed-value" for="look-speed">100%</output></label>
+          <input id="look-speed" type="range" min="0.5" max="1.5" step="0.1" value="1" />
+          <label for="view-fov">Field of view</label>
+          <select id="view-fov">
+            <option value="60">Narrow &middot; 60&deg;</option>
+            <option value="68" selected>Comfort &middot; 68&deg;</option>
+            <option value="75">Wide &middot; 75&deg;</option>
+          </select>
+          <label for="render-quality">Rendering quality</label>
+          <select id="render-quality"><option value="auto">Automatic</option><option value="low">Low · fewer shadows and pixels</option></select>
+          <label for="motion-mode">Motion effects</label>
+          <select id="motion-mode"><option value="system">Follow device preference</option><option value="reduced">Reduced · static endings</option></select>
+          <label class="audio-setting"><input id="audio-muted" type="checkbox" /> Mute audio</label>
+          <label for="camera-effects">Camera impacts</label>
+          <select id="camera-effects"><option value="off">Off</option><option value="reduced">Reduced</option><option value="full" selected>Full · brief impacts</option></select>
+          <label for="screen-effects">Atmosphere screen effects</label>
+          <select id="screen-effects"><option value="full">Full · restrained edges</option><option value="reduced">Reduced</option><option value="off">Off</option></select>
+          <label for="master-volume">Gameplay volume</label><input id="master-volume" type="range" min="0" max="100" value="70" />
+          <label for="alert-volume">Alert volume</label><input id="alert-volume" type="range" min="0" max="100" value="70" />
+        </div>
+
+      </dialog>
+    </main>
+
+    <div id="loading" class="loading" role="status" aria-live="polite">
+      <div class="loading-scenery" aria-hidden="true"></div>
+      <div class="loading-title"><span>LUNAR SURFACE / STATION 07</span><h2>MOONBASE<br>INTERN</h2><p>Your first shift. A long way from home.</p></div>
+      <div class="loading-status"><span class="loading-eyebrow">INCOMING PERSONNEL / INTERN</span><h2>Establishing station link.</h2><p>Preparing your arrival</p><progress id="loading-progress" max="1" value="0" aria-label="Station models loaded"></progress><span id="loading-count">00 / 17</span></div>
+    </div>
+    <div id="fallback" class="fallback" hidden>
+      <h2>The 3D view could not load.</h2>
+      <p id="fallback-message">Try a desktop browser with WebGL enabled to enter the station.</p>
+      <button id="reload-game" type="button">RELOAD STATION</button>
+    </div>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

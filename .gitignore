@@ -1,0 +1,37 @@
+nore
+# Local machine and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+# Future build tooling and private local configuration
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+# Temporary files
+*.log
+*.tmp
+
+# Isolated Playwright QA workspace (keep source and manifests tracked)
+.playtest/node_modules/
+.playtest/browsers/
+.playtest/.npm-cache/
+.playtest/tmp/
+.playtest/test-results/
+.playtest/playwright-report/
+.playtest/screenshots/
+
+# Root npm/Vite development and automated QA output
+.cache/
+test-results/
+playwright-report/
+coverage/
+*.tsbuildinfo
+
+# agent folder and files
+
+.agents
+AGENTS.md

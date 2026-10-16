@@ -1,0 +1,5 @@
+{
+  "framework": null,
+  "buildCommand": "npm run build && mkdir -p vercel-dist && cp -R \"dist/$(cat dist/latest-release.txt)/.\" vercel-dist/",
+  "outputDirectory": "vercel-dist"
+}
